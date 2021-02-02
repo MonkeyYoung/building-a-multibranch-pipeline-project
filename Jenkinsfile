@@ -2,7 +2,7 @@ pipeline {
     agent {
         docker {
             image 'node:6-alpine'
-            args '-p 3000:3000 -p 5000:5000 /bin/sh -c npm install -g cnpm --registry=https://registry.npm.taobao.org' 
+            args '-p 3000:3000 -p 5000:5000 /bin/sh -c "npm install -g cnpm --registry=https://registry.npm.taobao.org"' 
         }
     }
     environment {
